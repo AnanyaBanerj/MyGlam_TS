@@ -1,0 +1,410 @@
+        
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+:root {
+    --container-color: #e21d65 ;
+    --second-color: #ffc7e8;
+    --third-color: #f1008d;
+    --text-color: #fff;
+    --bg-color: black;
+}
+
+::selection {
+    color: var(--bg-color);
+    background-color: var(--second-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    height: 80px; /* Adjust the height as needed */
+}
+
+a {
+    text-decoration: none;
+  }
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+section{
+    padding: 3rem 0 2rem;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+
+}
+
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px; /* Adjust the padding as needed */
+}
+
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--second-color)
+
+}
+
+.logo span{
+    color: var(--text-color)
+}
+
+.login{
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.login:hover{
+    background: #e21d65;
+    transition: 0.3s;
+
+}
+
+.home {
+    width: 100%;
+    min-width: 440px;
+    background: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.home-text{
+    color: var(--text-color);
+    text-align: center;
+}
+
+.home-title{
+    font-size: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+ }
+
+ .home-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--second-color);
+
+ }
+ header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0, 4%, 14% / 50%);
+    transition: 0.4s;
+}
+
+header.shadow .logo{
+    color: #e21d65;
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.product-div-left{
+    padding: 20px;
+}
+
+.product-div-right{
+    padding: 20px;
+}
+
+.product-div{
+    margin: 1rem 0;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #fff;
+    border-radius: 3px;
+    column-gap: 10px;
+}
+
+.img-container img{
+    width: 200px;
+    margin: 0 auto;
+
+}
+
+.hover-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hover-container div{
+    border: 2px solid rosybrown;
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active{
+    border-color: rosybrown !important;
+
+}
+
+.hover-container div img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.product-div-right span{
+    display: block;
+}
+
+.product-name{
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.product-price{
+    /* font-weight: 700; */
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 500;
+    
+}
+
+.product-rating{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-rating span{
+    margin-right: 6px;
+}
+
+.product-description{
+    font-weight: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 22px;
+}
+
+.btn-groups{
+    margin-top: 22px;
+}
+
+.btn-groups button{
+    display: inline-block;
+    font-size: uppercase;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-groups button .fas{
+    margin-right: 8px;
+}
+
+.add-cart-btn{
+    background-color: #e21d65;
+    border: 2px solid #e21d65;
+    margin-right: 8px;
+}
+
+.add-cart-btn:hover{
+    background-color: #fff;
+    color: #e21d65;
+}
+
+@media screen and (max-width: 992px){
+    .product-div{
+        grid-template-columns: 100%;
+    }
+    .product-div-right{
+        text-align: center;
+    }
+    .product-rating{
+        justify-content: center;
+    }
+    .product-description{
+        max-width: 400;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .btn-groups button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* FOOTER */
+
+
+.site-footer {
+    background-color: #e21d6545;
+      text-align: center;
+      margin: 10px 0;
+      padding: 10px 0;
+  }
+  
+  #social-wrapper {
+      text-align: center;
+  }
+  
+
+  .social-wrapper {
+      text-align: center;
+  }
+  
+  .social-wrapper ul li {
+      display: inline;
+      margin: 0 5px;
+  }
+  
+  .twitter-icon,
+  .facebook-icon,
+  .instagram-icon,
+  .linkedin-icon,
+  .youtube-icon{
+      margin-top: .625em;
+      width: 40px;
+      height: 40px;
+      opacity: .75;
+      /* filter: alpha(opacity=100);  */
+    border-radius: 25px;
+  }
+  
+  .twitter-icon:hover,
+  .facebook-icon:hover,
+  .instagram-icon:hover,
+  .linkedin-icon:hover,
+  .youtube-icon:hover{
+      opacity: 1.0;
+      /* filter: alpha(opacity=100);  */
+  }
+  
+  .footer-nav p {
+      text-align: center;
+  }
+
+
+  #social-wrapper {
+    display: flex;
+    justify-content: center; /* Horizontally center the icons */
+    align-items: center; /* Vertically center the icons */
+}
+
+.social-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-wrapper ul li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+/* Remove the margin-top for the icons */
+.twitter-icon,
+.facebook-icon,
+.instagram-icon,
+linkedin-icon,
+youtube-icon {
+    margin-top: 0;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px; /* Adjust the padding as needed */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--second-color);
+    margin-bottom: 10px; /* Add margin to push the logo lower */
+}
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+    margin-top: 10px; /* Add margin to push the login button lower */
+}
+
+.login:hover {
+    background: #e21d65;
+    transition: 0.3s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem; /* Adjust the font size as needed for smaller screens */
+    }
+
+    .home-subtitle {
+        font-size: 0.9rem; /* Adjust the font size as needed for smaller screens */
+    }
+}
