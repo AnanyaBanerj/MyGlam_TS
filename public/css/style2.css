@@ -1,0 +1,59 @@
+/* Common styles for both login and register forms */
+form {
+    max-width: 500px; /* Increased width for a bigger form */
+    margin: 50px auto; /* Increased margin for better centering */
+    text-align: center;
+    padding: 20px;
+    /* border: 5px solid #e21d65; Dark pink border around the entire form */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased box shadow for emphasis */
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ff90b5; /* Light pink border */
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #e21d65; /* Darker pink border on focus */
+}
+
+.button1, button {
+    width: 100%;
+    display: block;
+    background-color: #e21d65;
+    border: 0;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 0;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button1:hover, button:hover {
+    background-color: #ff007c; /* Lighter pink on hover */
+}
+
+form h1 {
+    color: #e21d65;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Container styles for both login and register forms */
+.form-container {
+    background-color: #ffecf4; /* Light pink background color */
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+}
