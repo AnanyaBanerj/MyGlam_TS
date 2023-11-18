@@ -187,5 +187,126 @@ Each <li> contains an <a> (anchor) element with an href attribute pointing to a 
 
 
 
+##lipstick1.js
+```
+    
+
+      <div className="main-wrapper">
+        <div className="container">
+          <div className="product-div">
+            <div className="product-div-left">
+              <div className="img-container">
+                <img
+                  src="https://images-static.nykaa.com/media/catalog/product/e/6/e6d65cd41554453645_1.jpg?tr=w-344,h-344,cm-pad_resize"
+                  alt=""
+                  className="img"
+                />
+              </div>
+              <div className="hover-container">
+                <div>
+                  <img
+                    src="https://images-static.nykaa.com/media/catalog/product/e/6/e6d65cd41554453645_1.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://images-static.nykaa.com/media/catalog/product/e/6/e6d65cd41554453645_2.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://images-static.nykaa.com/media/catalog/product/e/e/eea75cd41554429930_3.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+                <div className="active">
+                  <img
+                    src="https://images-static.nykaa.com/media/catalog/product/e/e/eea75cd41554429930_4.jpg?tr=w-344,h-344,cm-pad_resize"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="product-div-right">
+              <span className="product-name">
+                Maybelline New York Color Sensational Creamy Matte Lipstick
+              </span>
+              <span className="product-price">Rs.299</span>
+              <div className="product-rating">
+                <span>
+                  <i className="fas fa-star"></i>
+                </span>
+                <span>
+                  <i className="fas fa-star"></i>
+                </span>
+                <span>
+                  <i className="fas fa-star"></i>
+                </span>
+                <span>
+                  <i className="fas fa-star"></i>
+                </span>
+                {/* <span><i className="fas fa-1"></i></span> */}
+                <span>58000 ratings</span>
+              </div>
+
+              <p className="product-description">
+                Looking for a lipstick that gives a matte finish but also has a
+                creamy feel to it? Look no further.
+              <div className="btn-groups">
+                {/* <a href="">
+                  <button type="button" className="add-cart-btn">
+                    <i className="fas fa-shopping-cart"></i>Add to Cart
+                  </button>
+                </a> */}
+
+                <a href="https://www.amazon.in/Maybelline-Color-Sensational-Creamy-Nuance/dp/B00YJJWBUA?&linkCode=ll1&tag=myglam09-21&linkId=45cb5c9069af750bb5f6878bd13f762f&language=en_IN&ref_=as_li_ss_tl">
+                  <button type="button" className="add-cart-btn">
+                    <i className="fas fa-wallet"></i>Link to Buy
+                  </button>
+                </a>
+              </div>
+
+              {/* <div className="btn-groups">
+                <a href="add_to_cart_url" className="add-cart-btn">
+                  <i className="fas fa-shopping-cart"></i>Add to Cart
+                </a>
+                <a href="link_to_buy_url" className="add-cart-btn">
+                  <i className="fas fa-wallet"></i>Link to Buy
+                </a>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+```
+
+
+The provided code is a React.js component that represents a product page. Let's break down the structure and functionality of the component:
+
+`<Postjs />`: This seems to be a custom React component named "Postjs." However, the implementation details of this component are not provided in the code snippet.
+
+`<header className="">` : This is the header section of the page. Inside, there is a navigation bar `(<div className="nav container">)` with a logo `(<a className="logo">)` and a login link `(<a className="login">).`
+
+`<section className="home" id="home">` : This is a section with the class "home" and an ID of "home." It appears to contain text related to the post, such as the post title `(<h4 className="home-title">)` and subtitle `(<span className="home-subtitle">)`, providing information about the author and the date of the post.
+
+`<div className="main-wrapper">:` This is the main content wrapper, containing product details within a container `(<div className="container">)`.
+
+Product Details:
+
+The left side `(<div className="product-div-left">)` contains an image container with a main product image `(<div className="img-container"><img className="img" />)` and a hover container with additional product images `(<div className="hover-container">)`. It seems to implement an image carousel with different views of the product.
+The right side `(<div className="product-div-right">)` displays details such as the product name `(<span className="product-name">)`, price `(<span className="product-price">)`, product rating `(<div className="product-rating">)`, product description `(<p className="product-description">)`, and a button group with a link to buy the product on Amazon `(<div className="btn-groups"><a><button></button></a></div>)`.
+The Amazon link in the button group directs the user to the product page on Amazon when clicked.
+
+
+The website incorporates a modular design for product pages, employing a React component structure to ensure consistency and scalability. Leveraging reusable components, such as the "Postjs" module, each page features a standard layout with header navigation, detailed product information, and a footer. The modular approach enables efficient development and maintenance, allowing for rapid creation of similar pages for various cosmetic products. Data-driven components dynamically populate content, facilitating seamless expansion of the product catalog while maintaining a cohesive user interface. This technical strategy optimizes codebase management and promotes a streamlined user experience across the website's diverse range of cosmetic offerings.
+
+
+
+
+
+
 
 
