@@ -52,7 +52,7 @@ function home() {
 
 ```
 
-* `<div className="nav container">` : A container for the navigation content with a class name "nav" and "container". The "container" class likely indicates that the content should be styled as part of a container.
+* `<div className="nav container">` : A container for the navigation content with a class name "nav" and "container". The "container" class  indicates that the content should be styled as part of a container.
 
 * `<a href="/home" className="logo">My<span>Glam</span></a>`: An anchor element representing the logo. The logo has a link ("/home"), and the text "MyGlam" with "Glam" wrapped in a span element.
 
@@ -64,9 +64,9 @@ function home() {
 
 * `auth-buttons` : A container for authentication-related buttons.
 
-* `<Link to="/login" className="login">Login</Link>` : A React Router Link component that links to "/login". It represents a "Login" button with the class "login".
+* `<Link to="/login" className="login">Login</Link>`: A React Router Link component that links to "/login". It represents a "Login" button with the class "login".
 
-*  `<Link to="/register" className="register">Register</Link>`: Similar to the login link, this represents a "Register" button.
+*  `<Link to="/register" className=" register">Register</Link>`: Similar to the login link, this represents a "Register" button.
 
 In summary, this component defines the structure of a header section for a webpage, including a logo, search functionality, and authentication buttons for login and registration. The FilterComponent is also included within the home component.
 
@@ -302,6 +302,67 @@ The Amazon link in the button group directs the user to the product page on Amaz
 
 
 The website incorporates a modular design for product pages, employing a React component structure to ensure consistency and scalability. Leveraging reusable components, such as the "Postjs" module, each page features a standard layout with header navigation, detailed product information, and a footer. The modular approach enables efficient development and maintenance, allowing for rapid creation of similar pages for various cosmetic products. Data-driven components dynamically populate content, facilitating seamless expansion of the product catalog while maintaining a cohesive user interface. This technical strategy optimizes codebase management and promotes a streamlined user experience across the website's diverse range of cosmetic offerings.
+
+## Css of the project. 
+* This @import statement fetches the "Poppins" font from Google Fonts.
+* The :wght parameter specifies different font weights to be included (100, 200, 300, 400, 500).
+
+
+` Global Styles:`
+1. Applies styles to all elements.
+2. :root: Defines CSS custom properties, such as color variables.
+3. ::selection: Styles for selected text.
+4. Various styles for common HTML elements to provide a consistent base appearance.
+5. The scroll-behavior property adds smooth scrolling behavior.
+
+
+`Header Styles:`
+
+1. `header`:
+ * Styles for the fixed header.
+ * .nav: Styles for the navigation bar.
+* .logo: Styles for the logo.
+* header.shadow: Additional styles applied when the header has a shadow during scrolling.
+
+
+`Footer Styles:`
+
+* .site-footer: Styles for the site footer, including background color and text alignment.
+Styles for social media icons within the footer.
+Home Styles:
+
+* .home: Styles for the home section, including width, background color, and centering.
+
+* .home-text, .home-title, .home-subtitle: Styles for text within the home section.
+
+`Post Filter Styles:`
+
+* .post-filter: Styles for the post filter section, including flex display and alignment.
+
+* .filter-item: Styles for individual filter items.
+* .active-filter: Styles for the active filter.
+`Post Styles:`
+
+* .post: Styles for the post section, including grid layout and centering.
+* .post-box: Styles for individual post boxes, including background color, box shadow, and padding.
+* .category, .post-title, .post-date, .post-decription: Styles for various elements within a post.
+
+
+` Header and Footer Adjustments:`
+
+Adjustments to header and footer elements based on scroll position (header.shadow).
+`Searchbar Styles:`
+
+* Styles for the search container in the header, including flex display and margin adjustments.
+* Styles for the search input.
+`Additional Styles:`
+
+* .regpage: Styles for a specific page with padding adjustments.
+* .button2: Styles for a button with a pink background color on hover.
+
+`Media Query Adjustments:`
+
+Adjustments for specific elements based on different screen sizes to ensure responsiveness.
 
 
 
