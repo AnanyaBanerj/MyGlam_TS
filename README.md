@@ -366,6 +366,140 @@ Adjustments for specific elements based on different screen sizes to ensure resp
 
 
 
+## JS
+
+Certainly! Let's go through the code and explain each part:
+
+```
+import React, { useEffect } from 'react';
+import $ from 'jquery';
+```
+Import React and the useEffect hook from React.
+Import the jQuery library. 
+
+```
+const FilterComponent = () => {
+  useEffect(() => {
+    // This effect runs once when the component mounts
+
+    $(".filter-item").click(function () {
+      // Event listener for clicks on elements with the class "filter-item"
+      const value = $(this).attr("data-filter");
+      if (value === "all") {
+        $(".post-box").show("1000");
+      } else {
+        $(".post-box").not("." + value).hide("1000");
+        $(".post-box").filter("." + value).show("1000");
+      }
+    });
+
+```
+The useEffect hook is used to perform side effects in function components. 
+
+```
+    $(".filter-item").click(function () {
+      // Adds and removes the "active-filter" class to the clicked filter item
+      $(this).addClass("active-filter").siblings().removeClass("active-filter");
+    });
+```
+This block adds the class "active-filter" to the clicked filter item and removes it from its siblings. 
+```
+    let header = document.querySelector('header');
+    window.addEventListener("scroll", () => {
+      // Adds a shadow class to the header when the user scrolls down
+      header.classList.toggle("shadow", window.scrollY > 0);
+    });
+```
+This block adds a "shadow" class to the header when the user scrolls down, creating a visual effect. 
+
+```
+    window.addEventListener('scroll', function () {
+      // Hides the header when the user scrolls down and shows it when scrolling up
+      if (window.scrollY > 500) {
+        header.style.transform = 'translateY(-100%)';
+        header.style.opacity = 0;
+      } else {
+        header.style.transform = 'translateY(0)';
+        header.style.opacity = 1;
+      }
+    });
+```
+This block hides the header with a smooth transition when the user scrolls down and shows it again when scrolling up.
+
+
+```
+Copy code
+    function performSearch() {
+      // Function to filter and display posts based on search input
+      var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      var postBoxes = document.querySelectorAll(".post-box");
+
+      document.body.classList.add("search-active");
+
+      postBoxes.forEach(function (postBox) {
+        var postTitle = postBox.querySelector(".post-title");
+
+        if (postTitle.textContent.toLowerCase().includes(searchTerm)) {
+          postBox.style.display = "block";
+        } else {
+          postBox.style.display = "none";
+        }
+      });
+    }
+```
+This function filters and displays posts based on a search input. It converts the search term and post titles to lowercase for a case-insensitive search.
+
+
+```
+    function clearSearch() {
+      // Function to clear the search input and display all posts
+      document.getElementById("searchInput").value = "";
+      var postBoxes = document.querySelectorAll(".post-box");
+
+      postBoxes.forEach(function (postBox) {
+        postBox.style.display = "block";
+      });
+      document.body.classList.remove("search-active");
+    }
+
+```
+This function clears the search input and displays all posts again.
+
+
+```
+    document.getElementById("searchButton").addEventListener("click", performSearch);
+
+    document.getElementById("searchInput").addEventListener("keyup", function (event) {
+      // Perform search on pressing Enter key
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    });
+```
+
+Event listeners for the search button click and Enter key press to trigger the performSearch function.
+
+```
+    function clearSearchInput() {
+      // Function to clear the search input when the page loads
+      document.getElementById("searchInput").value = "";
+    }
+
+    window.addEventListener('load', clearSearchInput);
+This function clears the search input when the page loads. The window.addEventListener('load', clearSearchInput) ensures this function is called when the page is fully loaded.
+javascript
+Copy code
+    return () => {
+      // Clean up any subscriptions or other side-effects if needed
+    };
+  }, []); // Empty dependency array ensures that this effect runs once when the component mounts
+};
+```
+
+
+
+
+
 
 
 
